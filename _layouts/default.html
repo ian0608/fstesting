@@ -20,7 +20,9 @@
         g.clearUserCookie=function(){};
     })(window,document,window['_fs_namespace'],'script','user');
       
-    console.log("*************from iframe*************");
+    window['_fs_ready'] = function() {
+      console.log("*************from iframe*************");
+    };
     </script>
 
     {% if site.google_analytics %}
