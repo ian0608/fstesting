@@ -3,6 +3,13 @@
   <body>
     <div><span>Name</span><input type="text"></div>
     <div><span>Email Address</span><input type="text"></div>
-    <div><span>FS Session URL</span><input type="text"></div>
+    <div><span>FS Session URL</span><input type="text" id="session-link"></div>
+    <button>Submit</button>
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      var fsOrg = urlParams.get("fsOrg");
+      var sessId = urlParams.get("sessId");
+      document.getElementById("session-link).value = "https://app.fullstory.com/ui/" + fsOrg + "/session/" + sessId; 
+    </script>
   </body>
 </html>
